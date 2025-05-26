@@ -229,13 +229,9 @@ export function Balances({
               style={{
                 fontSize: 22,
                 fontWeight: 400,
-                backgroundColor:
-                  props.value < 0
-                  ? theme.errorBackground
-                  : theme.tableBackground,
                 color:
                   props.value < 0
-                    ? theme.buttonNormalText
+                    ? theme.errorText
                     : props.value > 0
                       ? theme.noticeTextLight
                       : theme.pageTextSubdued,
