@@ -146,7 +146,7 @@ export function BalanceWithCarryover({
         ...getBalanceAmountStyle(balanceValue),
         overflow: 'hidden',
         textOverflow: 'ellipsis',
-        textAlign: 'right',
+        textAlign: 'right',       
         ...(!isDisabled && {
           cursor: 'pointer',
         }),
@@ -286,7 +286,15 @@ export function BalanceWithCarryover({
 
           {carryoverValue && (
             <CarryoverIndicatorComponent
-              style={getBalanceAmountStyle(balanceValue)}
+              style={{
+                backgroundColor: theme.errorBackgroundDark,
+                color: theme.errorTextLight,
+                borderRadius: 3,
+                paddingLeft: 1,
+                paddingRight: 1,
+                paddingBottom: 1,
+                paddingTop: 1
+              }}
             />
           )}
           {shouldInlineGoalStatus &&
