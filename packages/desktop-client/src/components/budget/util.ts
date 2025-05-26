@@ -72,7 +72,18 @@ export function makeBalanceAmountStyle(
   budgetedValue?: number | null,
 ) {
   if (value < 0) {
-    return { color: theme.errorText };
+    return {
+      width: 'fit-content',
+      backgroundColor: theme.errorBackgroundDark,
+      color: theme.errorTextLight,
+      marginLeft: 'auto',
+      marginRight: 0,
+      borderRadius: 5,
+      paddingLeft: 3,
+      paddingRight: 3,
+      paddingBottom: 1,
+      paddingTop: 1
+    };
   }
 
   if (goalValue == null) {
